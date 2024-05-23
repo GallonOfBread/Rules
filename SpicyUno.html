@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cabin">
+        <style>
+            body {
+                font-family: Cabin;
+            }
+        </style>
+    </head>
+    <style>
+        body {
+            font-size: 16px;
+        }
+        .header {
+            text-align: center;
+            font-weight: bold;
+        }
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            font-size: 16px;
+        }
+        td {
+            padding: 5px;
+        }
+    </style>
+    <body>
+        <img style="float: right;" src="SpicyUnoLogo.png"/>
+        <p>
+            Players: 3-20
+            <br/>
+            Time: 3-20 mins
+            <br/>
+            Ages: █+
+        </p>
+        <h3>
+            CONTENTS
+        </h3>
+        <p id="contents">
+            216 cards as follows:
+            <br/>
+            <span id="color-1"></span> cards - 2x 0, 4x 1-9, Draw 2, Reverse, & Skip
+            <br/>
+            <span id="color-2"></span> cards - 2x 0, 4x 1-9, Draw 2, Reverse, & Skip
+            <br/>
+            <span id="color-3"></span> cards - 2x 0, 4x 1-9, Draw 2, Reverse, & Skip
+            <br/>
+            <span id="color-4"></span> cards - 2x 0, 4x 1-9, Draw 2, Reverse, & Skip
+            <br/>
+            Wild cards - 8x Classic, & Draw 4
+        </p>
+        <h3>
+            GOAL
+        </h3>
+        <p>
+            To be the first player to run out of cards, <span class="spicy-rule">who then can sign the card they won on.</span>
+        </p>
+        <h3>
+            SETUP
+        </h3>
+        <p>
+            Deal each player seven cards. The remaining cards become the DRAW pile. Turn over the top card of the DRAW pile to start the DISCARD pile. If the first card of the DISCARD pile is not a number, see its effect under ACTION CARDS.
+        </p>
+        <h3>
+            PLAY
+        </h3>
+        <p>
+            In the first round, the player left of the dealer starts. <span class="spicy-rule">On further rounds, the player who won then starts.</span>
+        </p>
+        <p>
+            On your turn, you must match a card from your hand to the card on the top of the DISCARD pile by color, number, or symbol (symbols denote ACTION CARDS). <span class="spicy-rule">If you cannot play a card, you can take one card from another player per turn. If no one is willing or you receive an unusable card, you must draw cards until you can play. You cannot accept a card from a player once you start drawing cards.</span>
+        </p>
+        <p>
+            <span class="spicy-rule">If it is not your turn, you may offer any card to the current player. It does not need to be playable, but trustworthy players get their cards taken more often. You may not give away your last card.</span>
+        </p>
+        <p>
+            <span class="spicy-rule">If you have a card of the same color AND the same number or symbol, you may play that card immediately. Play then continues from you. If you could play out-of-turn and someone is already drawing cards, you must ask them permission to play. If granted, they can then stop drawing cards.</span>
+        </p>
+        <h3>
+            ACTION CARDS
+        </h3>
+        <table>
+            <tr>
+                <td class="header">
+                    Card
+                </td>
+                <td class="header">
+                    Action
+                </td>
+                <td class="header">
+                    Action if First
+                </td>
+                <td class="header">
+                    Action if Stacked
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span class="spicy-rule">SEVEN</span>
+                </td>
+                <td>
+                    <span class="spicy-rule">Slap the table! The slowest player draws one card.</span>
+                </td>
+                <td>
+                    <span class="spicy-rule">Slap the table! The slowest player draws one card.</span>
+                </td>
+                <td>
+                    <span class="spicy-rule">Slap the table! Someone draws a card for every SEVEN played.</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    DRAW 2
+                </td>
+                <td>
+                    <span class="spicy-rule">The next player may stack a DRAW 2, or draw two cards for every DRAW 2 played.</span>
+                </td>
+                <td>
+                    <span class="spicy-rule">Stack a DRAW 2</span> or begin the game by drawing two cards.
+                </td>
+                <td>
+                    <span class="spicy-rule">Add two cards to the count for the next player. When someone draws, the count resets.</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    REVERSE
+                </td>
+                <td>
+                    Reverse direction.
+                </td>
+                <td>
+                    Reverse direction and skip the first player.
+                </td>
+                <td>
+                    <span class="spicy-rule">Every REVERSE reverses direction, even if it is confusing.</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    SKIP
+                </td>
+                <td>
+                    Skip the next player.
+                </td>
+                <td>
+                    Skip the first player.
+                </td>
+                <td>
+                    <span class="spicy-rule">Stacked SKIPs only skip one neighboring player.</span>
+                </td>
+            </tr>
+            <tr>
+            </td>
+                <td>
+                    WILD
+                </td>
+                <td>
+                    Pick a color.
+                </td>
+                <td>
+                    Pick a color and play a card.
+                </td>
+                <td>
+                    <span class="spicy-rule">Pick a color. WILDs can only be played out-of-turn onto like WILDs.</span>
+                </td>
+            </tr>
+            <tr>
+            </td>
+                <td>
+                    DRAW 4
+                </td>
+                <td>
+                    Pick a color. <span class="spicy-rule">The next player may stack a DRAW 4, or draw four cards for every DRAW 4 played.</span>
+                </td>
+                <td>
+                    <span class="spicy-rule">Stack a DRAW 4</span> or begin play by drawing four cards.
+                </td>
+                <td>
+                    <span class="spicy-rule">Pick a color. Add four cards to the count for the next player. When someone draws, the count resets.</span>
+                </td>
+            </tr>
+        </table>
+        <h3>
+            ENDGAME
+        </h3>
+        <p>
+            When you play your next-to-last card, you must yell “UNO” to indicate that you have only one card left. A player draws two cards if they do not declare “UNO” and another player catches them by saying <span class="spicy-rule">“TE PELLÉ”</span>. 
+        </p>
+        <p>
+            Once a player has no cards left, the round ends, and <span class="spicy-rule">they sign the card they just played</span>.
+        </p>
+        <h3>
+            WORKS CITED
+        </h3>
+        <p>
+            Josh S, ███ █, ███ █, et al. “Games of Spicy Uno.” Sept. 2018.
+        </p>
+        <p>
+            Uno Card Game, Mattel, East Aurora, NY, 2014.
+        </p>
+        <p>
+            ██████ █. “Spicy Uno Logo.” Feb. 2024.
+        </p>
+        <script>
+            var params = {};
+            location.search.slice(1).split("&").forEach(function(pair) {
+                pair = pair.split("=");
+                params[decodeURIComponent(pair[0])] = decodeURIComponent(pair[1]);
+            });
+            normalText = [...document.getElementsByTagName("h3"), ...document.getElementsByTagName("p"), ...document.getElementsByTagName("td")];
+            tableText = document.getElementsByTagName("td");
+            if ("theme" in params) {
+                if (params["theme"] == "dark") {
+                    document.getElementsByTagName("body")[0].style.backgroundColor = "#000000";
+                    document.getElementsByTagName("table")[0].style.border = "1px solid white";
+                    for (var i = 0; i < normalText.length; i++) {
+                        normalText[i].style.color = "#FFFFFF";
+                    }
+                    for (var i = 0; i < tableText.length; i++) {
+                        tableText[i].style.border = "1px solid white";
+                    }
+                }
+                else {
+                    document.getElementsByTagName("body")[0].style.backgroundColor = "#FFFFFF";
+                    document.getElementsByTagName("table")[0].style.border = "1px solid black";
+                    for (var i = 0; i < normalText.length; i++) {
+                        normalText[i].style.color = "#000000";
+                    }
+                    for (var i = 0; i < tableText.length; i++) {
+                        tableText[i].style.border = "1px solid black";
+                    }
+                }
+            }
+            else {
+                document.getElementsByTagName("body")[0].style.backgroundColor = "#FFFFFF";
+                document.getElementsByTagName("table")[0].style.border = "1px solid black";
+                for (var i = 0; i < normalText.length; i++) {
+                    normalText[i].style.color = "#000000";
+                }
+                for (var i = 0; i < tableText.length; i++) {
+                    tableText[i].style.border = "1px solid black";
+                }
+            }
+            spicyRules = document.getElementsByClassName("spicy-rule");
+            if ("colors" in params) {
+                if (params["colors"] == "90s") {
+                    document.getElementsByTagName("img")[0].setAttribute("src","SpicyUnoLogo90s.png")
+                    document.getElementById("color-1").innerHTML = "Goldenrod";
+                    document.getElementById("color-2").innerHTML = "Pepto";
+                    document.getElementById("color-3").innerHTML = "Purple";
+                    document.getElementById("color-4").innerHTML = "Teal";
+                    document.getElementById("color-1").style.color = "#FEB81B";
+                    document.getElementById("color-2").style.color = "#DA80B5";
+                    document.getElementById("color-3").style.color = "#5863B1";
+                    document.getElementById("color-4").style.color = "#50C1C4";
+                    for (var i = 0; i < spicyRules.length; i++) {
+                        spicyRules[i].style.color = "#DA80B5";
+                    }
+                }
+                else if (params["colors"] == "tmnt") {
+                    document.getElementById("color-1").innerHTML = "Leo";
+                    document.getElementById("color-2").innerHTML = "Donnie";
+                    document.getElementById("color-3").innerHTML = "Raph";
+                    document.getElementById("color-4").innerHTML = "Mikey";
+                    document.getElementById("color-1").style.color = "#0269C6";
+                    document.getElementById("color-2").style.color = "#7F3D97";
+                    document.getElementById("color-3").style.color = "#E10E17";
+                    document.getElementById("color-4").style.color = "#F39904";
+                    for (var i = 0; i < spicyRules.length; i++) {
+                        spicyRules[i].style.color = "#E10E17";
+                    }
+                }
+                else {
+                    document.getElementById("color-1").innerHTML = "Blue";
+                    document.getElementById("color-2").innerHTML = "Green";
+                    document.getElementById("color-3").innerHTML = "Red";
+                    document.getElementById("color-4").innerHTML = "Yellow";
+                    document.getElementById("color-1").style.color = "Blue";
+                    document.getElementById("color-2").style.color = "Green";
+                    document.getElementById("color-3").style.color = "Red";
+                    document.getElementById("color-4").style.color = "Yellow";
+                    for (var i = 0; i < spicyRules.length; i++) {
+                        spicyRules[i].style.color = "Red";
+                    }
+                }
+            }
+            else {
+                document.getElementById("color-1").innerHTML = "Blue";
+                document.getElementById("color-2").innerHTML = "Green";
+                document.getElementById("color-3").innerHTML = "Red";
+                document.getElementById("color-4").innerHTML = "Yellow";
+                document.getElementById("color-1").style.color = "Blue";
+                document.getElementById("color-2").style.color = "Green";
+                document.getElementById("color-3").style.color = "Red";
+                document.getElementById("color-4").style.color = "Yellow";
+                for (var i = 0; i < spicyRules.length; i++) {
+                    spicyRules[i].style.color = "Red";
+                }
+            }
+        </script>
+    </body>
+</html>
