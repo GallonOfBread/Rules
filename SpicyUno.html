@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cabin">
+        <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
         <style>
             body {
                 font-family: Cabin;
@@ -247,10 +247,33 @@
             if ("colors" in params) {
                 if (params["colors"] == "90s") {
                     document.getElementsByTagName("img")[0].setAttribute("src","SpicyUnoLogo90s.png")
-                    document.getElementById("color-1").innerHTML = "Goldenrod";
-                    document.getElementById("color-2").innerHTML = "Pepto";
-                    document.getElementById("color-3").innerHTML = "Purple";
-                    document.getElementById("color-4").innerHTML = "Teal";
+                    x = Math.random();
+                    if (x < 0.2) {
+                        document.getElementById("color-1").innerHTML = "Goldenrod";
+                        document.getElementById("color-2").innerHTML = "Pepto";
+                        document.getElementById("color-3").innerHTML = "Purple";
+                        document.getElementById("color-4").innerHTML = "Teal";
+                    } else if (x < 0.4) {
+                        document.getElementById("color-1").innerHTML = "Dandelion";
+                        document.getElementById("color-2").innerHTML = "Orchid";
+                        document.getElementById("color-3").innerHTML = "Indigo";
+                        document.getElementById("color-4").innerHTML = "Turquoise";
+                    } else if (x < 0.6) {
+                        document.getElementById("color-1").innerHTML = "Amber";
+                        document.getElementById("color-2").innerHTML = "Coral";
+                        document.getElementById("color-3").innerHTML = "Sapphire";
+                        document.getElementById("color-4").innerHTML = "Emerald";
+                    } else if (x < 0.8) {
+                        document.getElementById("color-1").innerHTML = "Pear";
+                        document.getElementById("color-2").innerHTML = "Strawberry";
+                        document.getElementById("color-3").innerHTML = "Grape";
+                        document.getElementById("color-4").innerHTML = "Blueberry";
+                    } else {
+                        document.getElementById("color-1").innerHTML = "Yellow";
+                        document.getElementById("color-2").innerHTML = "Pink";
+                        document.getElementById("color-3").innerHTML = "Purple";
+                        document.getElementById("color-4").innerHTML = "Aqua";
+                    }
                     document.getElementById("color-1").style.color = "#FEB81B";
                     document.getElementById("color-2").style.color = "#DA80B5";
                     document.getElementById("color-3").style.color = "#5863B1";
