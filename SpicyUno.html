@@ -167,7 +167,6 @@
                 </td>
             </tr>
             <tr>
-            </td>
                 <td>
                     DRAW 4
                 </td>
@@ -179,6 +178,20 @@
                 </td>
                 <td>
                     <span class="spicy-rule">Pick a color. Add four cards to the count for the next player. When someone draws, the count resets.</span>
+                </td>
+            </tr>
+            <tr id="from-the-sewers-row" style="display:none">
+                <td>
+                    <span class="sewer-rule">FROM THE SEWERS</span>
+                </td>
+                <td>
+                    <span class="sewer-rule">Pick a color. The next player may stack a FROM THE SEWERS, or draw cards until they have at least one card of each color, for every FROM THE SEWERS played, in their hand. Show everyone those cards to confirm.</span>
+                </td>
+                <td>
+                    <span class="sewer-rule">Stack a FROM THE SEWERS or begin play by drawing cards until they have at least one card of each color.</span>
+                </td>
+                <td>
+                    <span class="sewer-rule">Pick a color. Add one card of each color to the count for the next player. When someone draws, the count resets.</span>
                 </td>
             </tr>
         </table>
@@ -195,13 +208,13 @@
             WORKS CITED
         </h3>
         <p>
-            Josh S, ███ █, ███ █, et al. “Games of Spicy Uno.” Sept. 2018.
+            Josh S, ███ █, Bre R, et al. “Games of Spicy Uno.” Sept. 2018.
         </p>
         <p>
             Uno Card Game, Mattel, East Aurora, NY, 2014.
         </p>
         <p>
-            ██████ █. “Spicy Uno Logo.” Feb. 2024.
+            Brandi C. “Spicy Uno Logo.” Feb. 2024.
         </p>
         <script>
             var params = {};
@@ -213,20 +226,20 @@
             tableText = document.getElementsByTagName("td");
             if ("theme" in params) {
                 if (params["theme"] == "dark") {
-                    document.getElementsByTagName("body")[0].style.backgroundColor = "#000000";
+                    document.getElementsByTagName("body")[0].style.backgroundColor = "black";
                     document.getElementsByTagName("table")[0].style.border = "1px solid white";
                     for (var i = 0; i < normalText.length; i++) {
-                        normalText[i].style.color = "#FFFFFF";
+                        normalText[i].style.color = "white";
                     }
                     for (var i = 0; i < tableText.length; i++) {
                         tableText[i].style.border = "1px solid white";
                     }
                 }
                 else {
-                    document.getElementsByTagName("body")[0].style.backgroundColor = "#FFFFFF";
+                    document.getElementsByTagName("body")[0].style.backgroundColor = "white";
                     document.getElementsByTagName("table")[0].style.border = "1px solid black";
                     for (var i = 0; i < normalText.length; i++) {
-                        normalText[i].style.color = "#000000";
+                        normalText[i].style.color = "black";
                     }
                     for (var i = 0; i < tableText.length; i++) {
                         tableText[i].style.border = "1px solid black";
@@ -234,10 +247,10 @@
                 }
             }
             else {
-                document.getElementsByTagName("body")[0].style.backgroundColor = "#FFFFFF";
+                document.getElementsByTagName("body")[0].style.backgroundColor = "white";
                 document.getElementsByTagName("table")[0].style.border = "1px solid black";
                 for (var i = 0; i < normalText.length; i++) {
-                    normalText[i].style.color = "#000000";
+                    normalText[i].style.color = "black";
                 }
                 for (var i = 0; i < tableText.length; i++) {
                     tableText[i].style.border = "1px solid black";
@@ -293,6 +306,11 @@
                     document.getElementById("color-4").style.color = "#F39904";
                     for (var i = 0; i < spicyRules.length; i++) {
                         spicyRules[i].style.color = "#E10E17";
+                    }
+                    document.getElementById("from-the-sewers-row").style.display = "table-row";
+                    sewerRules = document.getElementsByClassName("sewer-rule");
+                    for (var i = 0; i < sewerRules.length; i++) {
+                        sewerRules[i].style.color = "#9FC035";
                     }
                 }
                 else {
