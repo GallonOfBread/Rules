@@ -258,6 +258,23 @@
             }
             spicyRules = document.getElementsByClassName("spicy-rule");
             if ("colors" in params) {
+                if (params["colors"] == "70s") {
+                    document.getElementsByTagName("img")[0].setAttribute("src","SpicyUnoLogo90s.png")
+                    document.getElementById("color-1").innerHTML = "Banana";
+                    document.getElementById("color-2").innerHTML = "Berry";
+                    document.getElementById("color-3").innerHTML = "Orange";
+                    document.getElementById("color-4").innerHTML = "Plum";
+                    
+                    document.getElementById("color-1").style.color = "#D9B348";
+                    document.getElementById("color-2").style.color = "#57989D";
+                    document.getElementById("color-3").style.color = "#C4602C";
+                    document.getElementById("color-4").style.color = "#A62947";
+                    for (var i = 0; i < spicyRules.length; i++) {
+                        spicyRules[i].style.color = "#D9B348";
+                    }
+                }
+            }
+            if ("colors" in params) {
                 if (params["colors"] == "90s") {
                     document.getElementsByTagName("img")[0].setAttribute("src","SpicyUnoLogo90s.png")
                     x = Math.random();
