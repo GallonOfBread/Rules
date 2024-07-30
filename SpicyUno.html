@@ -273,9 +273,7 @@
                         spicyRules[i].style.color = "#D9B348";
                     }
                 }
-            }
-            if ("colors" in params) {
-                if (params["colors"] == "90s") {
+                else if (params["colors"] == "90s") {
                     document.getElementsByTagName("img")[0].setAttribute("src","SpicyUnoLogo90s.png")
                     x = Math.random();
                     if (x < 0.2) {
