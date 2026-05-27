@@ -257,6 +257,20 @@
                 }
             }
             spicyRules = document.getElementsByClassName("spicy-rule");
+            const BANANA = "#D9B348";
+            const BERRY  = "#57989D";
+            const ORANGE = "#C4602C";
+            const PLUM   = "#A62947";
+
+            const GOLD   = "#FEB81B";
+            const PINK   = "#DA80B5";
+            const PURPLE = "#5863B1";
+            const TEAL   = "#50C1C4";
+
+            const BLUE = "#";
+            const GREEN = "#497b5a";
+            const RED    = "#c62d28";
+            const YELLOW = "#e4e339";
             if ("colors" in params) {
                 if (params["colors"] == "70s") {
                     document.getElementsByTagName("img")[0].setAttribute("src","Spicy_Uno_Separate_Layers-70s.png")
@@ -264,50 +278,40 @@
                     document.getElementById("color-2").innerHTML = "Berry";
                     document.getElementById("color-3").innerHTML = "Orange";
                     document.getElementById("color-4").innerHTML = "Plum";
-                    
-                    document.getElementById("color-1").style.color = "#D9B348";
-                    document.getElementById("color-2").style.color = "#57989D";
-                    document.getElementById("color-3").style.color = "#C4602C";
-                    document.getElementById("color-4").style.color = "#A62947";
+                    document.getElementById("color-1").style.color = BANANA;
+                    document.getElementById("color-2").style.color = BERRY;
+                    document.getElementById("color-3").style.color = ORANGE;
+                    document.getElementById("color-4").style.color = PLUM;
                     for (var i = 0; i < spicyRules.length; i++) {
-                        spicyRules[i].style.color = "#D9B348";
+                        spicyRules[i].style.color = BANANA;
                     }
                 }
                 else if (params["colors"] == "90s") {
                     document.getElementsByTagName("img")[0].setAttribute("src","SpicyUnoLogo90s.png")
-                    x = Math.random();
-                    if (x < 0.2) {
-                        document.getElementById("color-1").innerHTML = "Goldenrod";
-                        document.getElementById("color-2").innerHTML = "Pepto";
-                        document.getElementById("color-3").innerHTML = "Purple";
-                        document.getElementById("color-4").innerHTML = "Teal";
-                    } else if (x < 0.4) {
-                        document.getElementById("color-1").innerHTML = "Dandelion";
-                        document.getElementById("color-2").innerHTML = "Orchid";
-                        document.getElementById("color-3").innerHTML = "Indigo";
-                        document.getElementById("color-4").innerHTML = "Turquoise";
-                    } else if (x < 0.6) {
-                        document.getElementById("color-1").innerHTML = "Amber";
-                        document.getElementById("color-2").innerHTML = "Coral";
-                        document.getElementById("color-3").innerHTML = "Sapphire";
-                        document.getElementById("color-4").innerHTML = "Emerald";
-                    } else if (x < 0.8) {
-                        document.getElementById("color-1").innerHTML = "Pear";
-                        document.getElementById("color-2").innerHTML = "Strawberry";
-                        document.getElementById("color-3").innerHTML = "Grape";
-                        document.getElementById("color-4").innerHTML = "Blueberry";
-                    } else {
-                        document.getElementById("color-1").innerHTML = "Yellow";
-                        document.getElementById("color-2").innerHTML = "Pink";
-                        document.getElementById("color-3").innerHTML = "Purple";
-                        document.getElementById("color-4").innerHTML = "Aqua";
-                    }
-                    document.getElementById("color-1").style.color = "#FEB81B";
-                    document.getElementById("color-2").style.color = "#DA80B5";
-                    document.getElementById("color-3").style.color = "#5863B1";
-                    document.getElementById("color-4").style.color = "#50C1C4";
+                    document.getElementById("color-1").innerHTML = "Gold";
+                    document.getElementById("color-2").innerHTML = "Pink";
+                    document.getElementById("color-3").innerHTML = "Purple";
+                    document.getElementById("color-4").innerHTML = "Teal";
+                    document.getElementById("color-1").style.color = GOLD;
+                    document.getElementById("color-2").style.color = PINK;
+                    document.getElementById("color-3").style.color = PURPLE;
+                    document.getElementById("color-4").style.color = TEAL;
                     for (var i = 0; i < spicyRules.length; i++) {
-                        spicyRules[i].style.color = "#DA80B5";
+                        spicyRules[i].style.color = PINK;
+                    }
+                }
+                else if (params["colors"] == "00s") {
+                    document.getElementsByTagName("img")[0].setAttribute("src","SpicyUnoLogo90s.png")
+                    document.getElementById("color-1").innerHTML = "Blue";
+                    document.getElementById("color-2").innerHTML = "Green";
+                    document.getElementById("color-3").innerHTML = "Red";
+                    document.getElementById("color-4").innerHTML = "Yellow";
+                    document.getElementById("color-1").style.color = BLUE;
+                    document.getElementById("color-2").style.color = GREEN;
+                    document.getElementById("color-3").style.color = RED;
+                    document.getElementById("color-4").style.color = YELLOW;
+                    for (var i = 0; i < spicyRules.length; i++) {
+                        spicyRules[i].style.color = RED;
                     }
                 }
                 else if (params["colors"] == "tmnt") {
