@@ -262,6 +262,11 @@
             const ORANGE = "#C4602C";
             const PLUM   = "#A62947";
 
+            const BLU3   = "#0e9ad0";
+            const GR33N  = "#5a9b64";
+            const ORANG3 = "#d4652c";
+            const PURPL3 = "#965490";
+
             const GOLD   = "#FEB81B";
             const PINK   = "#DA80B5";
             const PURPLE = "#5863B1";
@@ -284,6 +289,20 @@
                     document.getElementById("color-4").style.color = PLUM;
                     for (var i = 0; i < spicyRules.length; i++) {
                         spicyRules[i].style.color = BANANA;
+                    }
+                }
+                else if (params["colors"] == "80s") {
+                    document.getElementsByTagName("img")[0].setAttribute("src","SpicyUnoLogo90s.png")
+                    document.getElementById("color-1").innerHTML = "Blue";
+                    document.getElementById("color-2").innerHTML = "Green";
+                    document.getElementById("color-3").innerHTML = "Orange";
+                    document.getElementById("color-4").innerHTML = "Purple";
+                    document.getElementById("color-1").style.color = BLU3;
+                    document.getElementById("color-2").style.color = GR33N;
+                    document.getElementById("color-3").style.color = ORANG3;
+                    document.getElementById("color-4").style.color = PURPL3;
+                    for (var i = 0; i < spicyRules.length; i++) {
+                        spicyRules[i].style.color = ORANG3;
                     }
                 }
                 else if (params["colors"] == "90s") {
