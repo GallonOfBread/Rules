@@ -257,126 +257,52 @@
                 }
             }
             spicyRules = document.getElementsByClassName("spicy-rule");
-            const BANANA = "#D9B348";
-            const BERRY  = "#57989D";
-            const ORANGE = "#C4602C";
-            const PLUM   = "#A62947";
-
-            const BLU3   = "#0e9ad0";
-            const GR33N  = "#5a9b64";
-            const ORANG3 = "#d4652c";
-            const PURPL3 = "#965490";
-
-            const GOLD   = "#FEB81B";
-            const PINK   = "#DA80B5";
-            const PURPLE = "#5863B1";
-            const TEAL   = "#50C1C4";
-
-            const BLUE   = "#5b9bc6";
-            const GREEN  = "#497b5a";
-            const RED    = "#c62d28";
-            const YELLOW = "#e4e339";
-            if ("colors" in params) {
-                if (params["colors"] == "70s") {
-                    document.getElementsByTagName("img")[0].setAttribute("src","Spicy_Uno_Separate_Layers-70s.png")
-                    document.getElementById("color-1").innerHTML = "Banana";
-                    document.getElementById("color-2").innerHTML = "Berry";
-                    document.getElementById("color-3").innerHTML = "Orange";
-                    document.getElementById("color-4").innerHTML = "Plum";
-                    document.getElementById("color-1").style.color = BANANA;
-                    document.getElementById("color-2").style.color = BERRY;
-                    document.getElementById("color-3").style.color = ORANGE;
-                    document.getElementById("color-4").style.color = PLUM;
-                    for (var i = 0; i < spicyRules.length; i++) {
-                        spicyRules[i].style.color = BANANA;
-                    }
-                }
-                else if (params["colors"] == "80s") {
-                    document.getElementsByTagName("img")[0].setAttribute("src","SpicyUnoLogo90s.png")
-                    document.getElementById("color-1").innerHTML = "Blue";
-                    document.getElementById("color-2").innerHTML = "Green";
-                    document.getElementById("color-3").innerHTML = "Orange";
-                    document.getElementById("color-4").innerHTML = "Purple";
-                    document.getElementById("color-1").style.color = BLU3;
-                    document.getElementById("color-2").style.color = GR33N;
-                    document.getElementById("color-3").style.color = ORANG3;
-                    document.getElementById("color-4").style.color = PURPL3;
-                    for (var i = 0; i < spicyRules.length; i++) {
-                        spicyRules[i].style.color = ORANG3;
-                    }
-                }
-                else if (params["colors"] == "90s") {
-                    document.getElementsByTagName("img")[0].setAttribute("src","SpicyUnoLogo90s.png")
-                    document.getElementById("color-1").innerHTML = "Gold";
-                    document.getElementById("color-2").innerHTML = "Pink";
-                    document.getElementById("color-3").innerHTML = "Purple";
-                    document.getElementById("color-4").innerHTML = "Teal";
-                    document.getElementById("color-1").style.color = GOLD;
-                    document.getElementById("color-2").style.color = PINK;
-                    document.getElementById("color-3").style.color = PURPLE;
-                    document.getElementById("color-4").style.color = TEAL;
-                    for (var i = 0; i < spicyRules.length; i++) {
-                        spicyRules[i].style.color = PINK;
-                    }
-                }
-                else if (params["colors"] == "00s") {
-                    document.getElementsByTagName("img")[0].setAttribute("src","SpicyUnoLogo90s.png")
-                    document.getElementById("color-1").innerHTML = "Blue";
-                    document.getElementById("color-2").innerHTML = "Green";
-                    document.getElementById("color-3").innerHTML = "Red";
-                    document.getElementById("color-4").innerHTML = "Yellow";
-                    document.getElementById("color-1").style.color = BLUE;
-                    document.getElementById("color-2").style.color = GREEN;
-                    document.getElementById("color-3").style.color = RED;
-                    document.getElementById("color-4").style.color = YELLOW;
-                    for (var i = 0; i < spicyRules.length; i++) {
-                        spicyRules[i].style.color = RED;
-                    }
-                }
-                else if (params["colors"] == "tmnt") {
-                    document.getElementById("color-1").innerHTML = "Leo";
-                    document.getElementById("color-2").innerHTML = "Donnie";
-                    document.getElementById("color-3").innerHTML = "Raph";
-                    document.getElementById("color-4").innerHTML = "Mikey";
-                    document.getElementById("color-1").style.color = "#0269C6";
-                    document.getElementById("color-2").style.color = "#7F3D97";
-                    document.getElementById("color-3").style.color = "#E10E17";
-                    document.getElementById("color-4").style.color = "#F39904";
-                    for (var i = 0; i < spicyRules.length; i++) {
-                        spicyRules[i].style.color = "#E10E17";
-                    }
-                    document.getElementById("from-the-sewers-row").style.display = "table-row";
-                    sewerRules = document.getElementsByClassName("sewer-rule");
-                    for (var i = 0; i < sewerRules.length; i++) {
-                        sewerRules[i].style.color = "#9FC035";
-                    }
-                }
-                else {
-                    document.getElementById("color-1").innerHTML = "Blue";
-                    document.getElementById("color-2").innerHTML = "Green";
-                    document.getElementById("color-3").innerHTML = "Red";
-                    document.getElementById("color-4").innerHTML = "Yellow";
-                    document.getElementById("color-1").style.color = "Blue";
-                    document.getElementById("color-2").style.color = "Green";
-                    document.getElementById("color-3").style.color = "Red";
-                    document.getElementById("color-4").style.color = "Yellow";
-                    for (var i = 0; i < spicyRules.length; i++) {
-                        spicyRules[i].style.color = "Red";
-                    }
+            const colors = {
+                "70s": {
+                    a: ["Banana", "#D9B348"],
+                    b: ["Berry",  "#57989D"],
+                    c: ["Orange", "#C4602C"],
+                    d: ["Plum",   "#A62947"]
+                },
+                "80s": {
+                    a: ["Blue",   "#0e9ad0"],
+                    b: ["Green",  "#5a9b64"],
+                    c: ["Orange", "#d4652c"],
+                    d: ["Purple", "#965490"]
+                },
+                "90s": {
+                    a: ["Gold",   "#FEB81B"],
+                    b: ["Pink",   "#DA80B5"],
+                    c: ["Purple", "#5863B1"],
+                    d: ["Teal",   "#50C1C4"]
+                },
+                "00s": {
+                    a: ["Blue",   "#5b9bc6"],
+                    b: ["Green",  "#497b5a"],
+                    c: ["Red",    "#c62d28"],
+                    d: ["Yellow", "#e4e339"]
+                },
+                "tmnt": {
+                    a: ["Leo",    "#0269C6"],
+                    b: ["Donnie", "#7F3D97"],
+                    c: ["Raph",   "#E10E17"],
+                    d: ["Mikey",  "#F39904"]
+                },
+                "default": {
+                    a: ["Blue",   "Blue"  ],
+                    b: ["Green",  "Green" ],
+                    c: ["Red",    "Red"   ],
+                    d: ["Yellow", "Yellow"]
                 }
             }
-            else {
-                document.getElementById("color-1").innerHTML = "Blue";
-                document.getElementById("color-2").innerHTML = "Green";
-                document.getElementById("color-3").innerHTML = "Red";
-                document.getElementById("color-4").innerHTML = "Yellow";
-                document.getElementById("color-1").style.color = "Blue";
-                document.getElementById("color-2").style.color = "Green";
-                document.getElementById("color-3").style.color = "Red";
-                document.getElementById("color-4").style.color = "Yellow";
-                for (var i = 0; i < spicyRules.length; i++) {
-                    spicyRules[i].style.color = "Red";
-                }
+
+            const scheme = colors[params["colors"]] ?? colors["default"];
+            [document.getElementById("color-1").innerHTML, document.getElementById("color-1").style.color] = scheme.a;
+            [document.getElementById("color-2").innerHTML, document.getElementById("color-2").style.color] = scheme.b;
+            [document.getElementById("color-3").innerHTML, document.getElementById("color-3").style.color] = scheme.c;
+            [document.getElementById("color-4").innerHTML, document.getElementById("color-4").style.color] = scheme.d;
+            for (var i = 0; i < spicyRules.length; i++) {
+                spicyRules[i].style.color = scheme.c[1];
             }
         </script>
     </body>
